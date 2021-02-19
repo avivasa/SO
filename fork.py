@@ -1,11 +1,13 @@
 import os
 import time
 
+# método executado pelo processo filho
 def filho():
     while(True):
         print("Sou o Filho: PID {}. Meu Pai é {} \n".format(os.getpid(),os.getppid()))
         time.sleep(1)
 
+# método executado pelo processo pai
 def pai():
     while(True):
         print("Sou o Pai: PID {}. Meu Pai é {}\n".format(os.getpid(),os.getppid()))
